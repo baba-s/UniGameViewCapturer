@@ -38,7 +38,7 @@ namespace Kogane.Internal
 
 			var dir = Path.GetDirectoryName( filename );
 
-			if ( !Directory.Exists( dir ) )
+			if ( !string.IsNullOrWhiteSpace( dir ) && !Directory.Exists( dir ) )
 			{
 				Directory.CreateDirectory( dir );
 			}
